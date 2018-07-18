@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 17111612}
   - component: {fileID: 17111611}
   - component: {fileID: 17111610}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: modelBonfire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5053,7 +5053,7 @@ GameObject:
   - component: {fileID: 510211924}
   - component: {fileID: 510211923}
   - component: {fileID: 510211922}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Torch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10146,8 +10146,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 965842283}
   m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: -0.5}
-  m_LocalPosition: {x: 5.54, y: -13.485693, z: -5.5756645}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalPosition: {x: 6.19, y: -9.07, z: -5.5756645}
+  m_LocalScale: {x: 0.17018001, y: 0.17018001, z: 0.17018001}
   m_Children: []
   m_Father: {fileID: 1935330564}
   m_RootOrder: 0
@@ -10652,6 +10652,18 @@ Prefab:
       propertyPath: m_Color.rgba
       value: 4289967031
       objectReference: {fileID: 0}
+    - target: {fileID: 1393747726985460, guid: 43524e44a8b07a349a7d923be0e915a1, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4903756976594358, guid: 43524e44a8b07a349a7d923be0e915a1, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 487
+      objectReference: {fileID: 0}
+    - target: {fileID: 1728765386509842, guid: 43524e44a8b07a349a7d923be0e915a1, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43524e44a8b07a349a7d923be0e915a1, type: 2}
   m_IsPrefabAsset: 0
@@ -11081,7 +11093,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2101333504}
   - component: {fileID: 2101333505}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Point light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
