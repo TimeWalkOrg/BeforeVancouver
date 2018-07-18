@@ -1175,7 +1175,7 @@ Prefab:
     - target: {fileID: 102787294877016034, guid: 43524e44a8b07a349a7d923be0e915a1,
         type: 2}
       propertyPath: m_FontSize
-      value: 72
+      value: 34
       objectReference: {fileID: 0}
     - target: {fileID: 4298569468728656, guid: 43524e44a8b07a349a7d923be0e915a1, type: 2}
       propertyPath: m_LocalScale.x
@@ -1233,6 +1233,31 @@ Prefab:
     - target: {fileID: 4372483002088946, guid: 43524e44a8b07a349a7d923be0e915a1, type: 2}
       propertyPath: m_LocalPosition.y
       value: -29.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 102787294877016034, guid: 43524e44a8b07a349a7d923be0e915a1,
+        type: 2}
+      propertyPath: m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 0a36608bfb9daae42bdee0295827589b,
+        type: 3}
+    - target: {fileID: 23723860818888552, guid: 43524e44a8b07a349a7d923be0e915a1,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0a36608bfb9daae42bdee0295827589b, type: 3}
+    - target: {fileID: 102787294877016034, guid: 43524e44a8b07a349a7d923be0e915a1,
+        type: 2}
+      propertyPath: m_Text
+      value: 'Building #2'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298569468728656, guid: 43524e44a8b07a349a7d923be0e915a1, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.671
+      objectReference: {fileID: 0}
+    - target: {fileID: 102787294877016034, guid: 43524e44a8b07a349a7d923be0e915a1,
+        type: 2}
+      propertyPath: m_Color.rgba
+      value: 4289967031
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43524e44a8b07a349a7d923be0e915a1, type: 2}
