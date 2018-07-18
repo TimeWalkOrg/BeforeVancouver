@@ -9,3 +9,7 @@ The Unity project is inside the folder "BeforeVancouver - Unity Project".  To op
 1. Make sure you have installed Unity 2018.1.6 or higher from https://unity3d.com/get-unity/download/archive
 2. Open Unity
 3. Choose "Open" and find the folder "BeforeVancouver - Unity Project" on your hard drive.  It should then open into Unity.
+
+We are recreating this Squamish village as of 1800 CE
+
+[!Map](https://github.com/TimeWalkOrg/BeforeVancouver/blob/master/Sun'ahk%20Map.jpg)
