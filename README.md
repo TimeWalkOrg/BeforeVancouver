@@ -13,3 +13,9 @@ The Unity project is inside the folder "BeforeVancouver - Unity Project".  To op
 We are recreating this Squamish village as of 1800 CE:
 
 ![Map](https://github.com/TimeWalkOrg/BeforeVancouver/blob/master/Sun'ahk%20Map.jpg)
+
+
+Map highlighting local creeks:
+
+![Creeks](https://github.com/TimeWalkOrg/BeforeVancouver/blob/master/
+Creeks%20Map.jpg)
