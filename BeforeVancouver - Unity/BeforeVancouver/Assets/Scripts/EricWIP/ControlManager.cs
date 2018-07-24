@@ -57,7 +57,7 @@ public class ControlManager : MonoBehaviour
 
 	private void Start()
 	{
-		SetYear(1920);
+		SetYear(1800);
 	}
 
 	private void Update()

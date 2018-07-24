@@ -9,8 +9,7 @@ GameObject:
   m_Component:
   - component: {fileID: 400000}
   - component: {fileID: 11400000}
-  - component: {fileID: 114610386765025990}
-  - component: {fileID: 82654561536507340}
+  - component: {fileID: 82490117461386814}
   m_Layer: 0
   m_Name: Crow Flock - Wild Few
   m_TagString: Untagged
@@ -106,7 +105,7 @@ Prefab:
   m_SourcePrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100000}
   m_IsPrefabAsset: 1
---- !u!82 &82654561536507340
+--- !u!82 &82490117461386814
 AudioSource:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -117,10 +116,10 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: ab5eb0b6e1e39c644b53faf607dda99b,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: c2d879d3fae88f24fb084c72be1ae8a8, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -162,7 +161,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -202,27 +201,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &114610386765025990
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7c7be76fa0fc6b4ca23d0721db89bc6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _idleSounds:
-  - {fileID: 8300000, guid: c2d879d3fae88f24fb084c72be1ae8a8, type: 3}
-  - {fileID: 8300000, guid: c2d879d3fae88f24fb084c72be1ae8a8, type: 3}
-  _idleSoundRandomChance: 0.05
-  _flightSounds:
-  - {fileID: 8300000, guid: c2d879d3fae88f24fb084c72be1ae8a8, type: 3}
-  - {fileID: 8300000, guid: c2d879d3fae88f24fb084c72be1ae8a8, type: 3}
-  _flightSoundRandomChance: 0.05
-  _scareSounds: []
-  _pitchMin: 0.85
-  _pitchMax: 1
-  _volumeMin: 0.6
-  _volumeMax: 0.8

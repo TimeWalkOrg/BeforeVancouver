@@ -52,9 +52,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yearData:
-  - year: 1920
-  - year: 1930
-  - year: 1940
+  - year: 1800
+  - year: 2018
   currentYearIndex: 0
   daySkyboxMat: {fileID: 2100000, guid: 9d285e59d9b19d7438621d00392aa38f, type: 2}
   nightSkyboxMat: {fileID: 2100000, guid: 0bc8645d66d6f784398dcfe17ace58d8, type: 2}
