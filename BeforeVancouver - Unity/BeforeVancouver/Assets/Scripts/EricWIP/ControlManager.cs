@@ -37,26 +37,38 @@ public class ControlManager : MonoBehaviour
 	}
 	#endregion
 
+	// controller
+	public GameObject fpsController;
+	public GameObject vrController;
+	public Transform playerStartT;
+	private GameObject player;
+
+	// time active
 	public YearData[] yearData;
 	public int currentYearIndex;// { get; private set; }
 
+	// night day
 	public Material daySkyboxMat;
 	public Material nightSkyboxMat;
-
 	public Color dayLightColor;
 	public Color nightLightColor;
-
 	public Color daySkyColor;
 	public Color nightSkyColor;
-
 	public float dayLightIntensity = 0.4f;
 	public float nightLightIntensity = 0.1f;
-
 	public Light lightComponent;
 	public bool isDay = true;
 
 	private void Start()
 	{
+		if (UnityEngine.XR.XRSettings.enabled)
+		{
+			player = Instantiate(vrController, playerStartT.position, playerStartT.rotation);
+		}
+		else
+		{
+			player = Instantiate(fpsController, playerStartT.position, playerStartT.rotation);
+		}
 		SetYear(1800);
 	}
 

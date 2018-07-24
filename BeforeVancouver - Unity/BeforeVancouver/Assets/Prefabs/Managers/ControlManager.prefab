@@ -51,6 +51,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e88be14e43253e84fa2caee7e5f17074, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fpsController: {fileID: 0}
+  vrController: {fileID: 0}
+  playerStartT: {fileID: 0}
   yearData:
   - year: 1800
   - year: 2018
