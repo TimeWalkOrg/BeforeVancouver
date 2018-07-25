@@ -51,8 +51,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e88be14e43253e84fa2caee7e5f17074, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fpsController: {fileID: 0}
-  vrController: {fileID: 0}
+  fpsController: {fileID: 1849108729063988, guid: 94ebb6bb55f89c447905f32649c29a38,
+    type: 2}
+  vrController: {fileID: 100004, guid: 126d619cf4daa52469682f85c1378b4a, type: 2}
+  oculusAvatar: {fileID: 158226, guid: 84c8b8609f9bb434eaf5248f17ff1293, type: 2}
   playerStartT: {fileID: 0}
   yearData:
   - year: 1800

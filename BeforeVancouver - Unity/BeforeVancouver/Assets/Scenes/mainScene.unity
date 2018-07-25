@@ -10721,17 +10721,6 @@ Prefab:
       propertyPath: lightComponent
       value: 
       objectReference: {fileID: 1795900919}
-    - target: {fileID: 114581586422070476, guid: f68073a9285adbb45a012abea4fb383b,
-        type: 2}
-      propertyPath: fpsController
-      value: 
-      objectReference: {fileID: 1849108729063988, guid: 94ebb6bb55f89c447905f32649c29a38,
-        type: 2}
-    - target: {fileID: 114581586422070476, guid: f68073a9285adbb45a012abea4fb383b,
-        type: 2}
-      propertyPath: vrController
-      value: 
-      objectReference: {fileID: 100004, guid: 126d619cf4daa52469682f85c1378b4a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f68073a9285adbb45a012abea4fb383b, type: 2}
   m_IsPrefabAsset: 0
