@@ -40,7 +40,6 @@ public class ControlManager : MonoBehaviour
 	// controller
 	public GameObject fpsController;
 	public GameObject vrController;
-	public GameObject oculusAvatar;
 	public Transform playerStartT;
 	private GameObject player;
 	private GameObject avatar;
@@ -66,7 +65,6 @@ public class ControlManager : MonoBehaviour
 		if (UnityEngine.XR.XRSettings.enabled)
 		{
 			player = Instantiate(vrController, playerStartT.position, playerStartT.rotation);
-			avatar = Instantiate(oculusAvatar, playerStartT.position, playerStartT.rotation);
 		}
 		else
 		{

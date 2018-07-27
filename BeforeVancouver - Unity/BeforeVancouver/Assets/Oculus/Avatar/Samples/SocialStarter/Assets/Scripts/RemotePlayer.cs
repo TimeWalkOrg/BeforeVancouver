@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Oculus.Platform;
 
-public class RemotePlayer
-{
+public class RemotePlayer {
     public ulong remoteUserID;
     public bool stillInRoom;
 
@@ -28,7 +27,4 @@ public class RemotePlayer
 
     // the previous received rotations to interpolate from
     public Quaternion receivedBodyRotationPrior;
-
-    // the voip tracker for the player
-    public VoipAudioSourceHiLevel voipSource;
 }

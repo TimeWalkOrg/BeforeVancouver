@@ -32,7 +32,7 @@ namespace UnityStandardAssets.Utility
 
             float stopTime = Time.time + Random.Range(minDuration, maxDuration);
 
-            while (Time.time < stopTime && !m_EarlyStop)
+            while (Time.time < stopTime || m_EarlyStop)
             {
                 yield return null;
             }
@@ -41,8 +41,8 @@ namespace UnityStandardAssets.Utility
             // turn off emission
             foreach (var system in systems)
             {
-                var emission = system.emission;
-                emission.enabled = false;
+                ParticleSystem.EmissionModule em = system.emission;
+                em.enabled = false;
             }
             BroadcastMessage("Extinguish", SendMessageOptions.DontRequireReceiver);
 

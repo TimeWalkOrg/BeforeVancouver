@@ -16,7 +16,7 @@ public class RoomManager
     public ulong roomID;
 
     // the ID of the Room that I'm invited to
-    private ulong invitedRoomID;
+    private ulong invitedRoomID;   
 
     // Am I the server?
     private bool amIServer;
@@ -28,7 +28,7 @@ public class RoomManager
     {
         amIServer = false;
         startupDone = false;
-        Rooms.SetRoomInviteAcceptedNotificationCallback(AcceptingInviteCallback);
+        Rooms.SetRoomInviteNotificationCallback(AcceptingInviteCallback);
         Rooms.SetUpdateNotificationCallback(RoomUpdateCallback);
     }
 
@@ -39,11 +39,11 @@ public class RoomManager
     {
         if (msg.IsError)
         {
-            SocialPlatformManager.TerminateWithError(msg);
+            PlatformManager.TerminateWithError(msg);
             return;
         }
 
-        SocialPlatformManager.LogOutput("Launched Invite to join Room: " + msg.Data);
+        PlatformManager.LogOutput("Launched Invite to join Room: " + msg.Data);
 
         invitedRoomID = Convert.ToUInt64(msg.GetString());
 
@@ -76,7 +76,7 @@ public class RoomManager
 
     public void CreateRoom()
     {
-        Rooms.CreateAndJoinPrivate(RoomJoinPolicy.FriendsOfOwner, 4, true)
+        Rooms.CreateAndJoinPrivate(RoomJoinPolicy.InvitedUsers, 4, true)
              .OnComplete(CreateAndJoinPrivateRoomCallback);
     }
 
@@ -84,13 +84,13 @@ public class RoomManager
     {
         if (msg.IsError)
         {
-            SocialPlatformManager.TerminateWithError(msg);
+            PlatformManager.TerminateWithError(msg);
             return;
         }
 
         roomID = msg.Data.ID;
 
-        if (msg.Data.OwnerOptional != null && msg.Data.OwnerOptional.ID == SocialPlatformManager.MyID)
+        if (msg.Data.Owner.ID == PlatformManager.MyID)
         {
             amIServer = true;
         }
@@ -99,15 +99,15 @@ public class RoomManager
             amIServer = false;
         }
 
-        SocialPlatformManager.TransitionToState(SocialPlatformManager.State.WAITING_IN_A_ROOM);
-        SocialPlatformManager.SetFloorColorForState(amIServer);
+        PlatformManager.TransitionToState(PlatformManager.State.WAITING_IN_A_ROOM);
+        PlatformManager.SetFloorColorForState(amIServer);
     }
 
     void OnLaunchInviteWorkflowComplete(Message msg)
     {
         if (msg.IsError)
         {
-            SocialPlatformManager.TerminateWithError(msg);
+            PlatformManager.TerminateWithError(msg);
             return;
         }
     }
@@ -118,7 +118,7 @@ public class RoomManager
 
     public void JoinExistingRoom(ulong roomID)
     {
-        SocialPlatformManager.TransitionToState(SocialPlatformManager.State.JOINING_A_ROOM);
+        PlatformManager.TransitionToState(PlatformManager.State.JOINING_A_ROOM);
         Rooms.Join(roomID, true).OnComplete(JoinRoomCallback);
     }
 
@@ -130,12 +130,9 @@ public class RoomManager
             return;
         }
 
-        var ownerOculusId = msg.Data.OwnerOptional != null ? msg.Data.OwnerOptional.OculusID : "null";
-        var userCount = msg.Data.UsersOptional != null ? msg.Data.UsersOptional.Count : 0;
-
-        SocialPlatformManager.LogOutput("Joined Room " + msg.Data.ID + " owner: " + ownerOculusId + " count: " + userCount);
+        PlatformManager.LogOutput("Joined Room " + msg.Data.ID + " owner: " + msg.Data.Owner.OculusID + " count: " + msg.Data.Users.Count);
         roomID = msg.Data.ID;
-        ProcessRoomData(msg);
+        ProcessRoomData (msg);
     }
 
     #endregion
@@ -146,15 +143,12 @@ public class RoomManager
     {
         if (msg.IsError)
         {
-            SocialPlatformManager.TerminateWithError(msg);
+            PlatformManager.TerminateWithError(msg);
             return;
         }
 
-        var ownerOculusId = msg.Data.OwnerOptional != null ? msg.Data.OwnerOptional.OculusID : "null";
-        var userCount = msg.Data.UsersOptional != null ? msg.Data.UsersOptional.Count : 0;
-
-        SocialPlatformManager.LogOutput("Room Update " + msg.Data.ID + " owner: " + ownerOculusId + " count: " + userCount);
-        ProcessRoomData(msg);
+        PlatformManager.LogOutput("Room Update " + msg.Data.ID + " owner: " + msg.Data.Owner.OculusID + " count: " + msg.Data.Users.Count);
+        ProcessRoomData (msg);
     }
 
     #endregion
@@ -168,7 +162,7 @@ public class RoomManager
             Rooms.Leave(roomID);
             roomID = 0;
         }
-        SocialPlatformManager.TransitionToState(SocialPlatformManager.State.LEAVING_A_ROOM);
+        PlatformManager.TransitionToState(PlatformManager.State.LEAVING_A_ROOM);
     }
 
     #endregion
@@ -177,7 +171,7 @@ public class RoomManager
 
     void ProcessRoomData(Message<Oculus.Platform.Models.Room> msg)
     {
-        if (msg.Data.OwnerOptional != null && msg.Data.OwnerOptional.ID == SocialPlatformManager.MyID)
+        if (msg.Data.Owner.ID == PlatformManager.MyID)
         {
             amIServer = true;
         }
@@ -187,38 +181,35 @@ public class RoomManager
         }
 
         // if the caller left while I was in the process of joining, just use that as our new room
-        if (msg.Data.UsersOptional != null && msg.Data.UsersOptional.Count == 1)
+        if (msg.Data.Users.Count == 1)
         {
-            SocialPlatformManager.TransitionToState(SocialPlatformManager.State.WAITING_IN_A_ROOM);
+            PlatformManager.TransitionToState(PlatformManager.State.WAITING_IN_A_ROOM);
         }
         else
         {
-            SocialPlatformManager.TransitionToState(SocialPlatformManager.State.CONNECTED_IN_A_ROOM);
+            PlatformManager.TransitionToState(PlatformManager.State.CONNECTED_IN_A_ROOM);
         }
 
         // Look for users that left
-        SocialPlatformManager.MarkAllRemoteUsersAsNotInRoom();
+        PlatformManager.MarkAllRemoteUsersAsNotInRoom();
 
-        if (msg.Data.UsersOptional != null)
+        foreach (User user in msg.Data.Users)
         {
-            foreach (User user in msg.Data.UsersOptional)
+            if (user.ID != PlatformManager.MyID)
             {
-                if (user.ID != SocialPlatformManager.MyID)
+                if (!PlatformManager.IsUserInRoom (user.ID)) 
                 {
-                    if (!SocialPlatformManager.IsUserInRoom(user.ID))
-                    {
-                        SocialPlatformManager.AddRemoteUser(user.ID);
-                    }
-                    else
-                    {
-                        SocialPlatformManager.MarkRemoteUserInRoom(user.ID);
-                    }
+                    PlatformManager.AddRemoteUser (user.ID);
+                } 
+                else 
+                {
+                    PlatformManager.MarkRemoteUserInRoom (user.ID);
                 }
             }
         }
 
-        SocialPlatformManager.ForgetRemoteUsersNotInRoom();
-        SocialPlatformManager.SetFloorColorForState(amIServer);
+        PlatformManager.ForgetRemoteUsersNotInRoom();
+        PlatformManager.SetFloorColorForState(amIServer);	
     }
 
     #endregion

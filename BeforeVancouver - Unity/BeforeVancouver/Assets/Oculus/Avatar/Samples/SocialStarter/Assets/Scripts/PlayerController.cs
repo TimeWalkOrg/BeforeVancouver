@@ -5,8 +5,7 @@ using UnityEngine;
 using Oculus.Platform;
 using Oculus.Platform.Models;
 
-public class PlayerController : SocialPlatformManager
-{
+public class PlayerController : PlatformManager {
 
     // Secondary camera to debug and view the whole scene from above
     public Camera spyCamera;
@@ -23,7 +22,7 @@ public class PlayerController : SocialPlatformManager
     }
 
     // Use this for initialization
-    public override void Start()
+    public override void Start ()
     {
         OVRManager.instance.trackingOriginType = OVRManager.TrackingOrigin.EyeLevel;
         base.Start();
@@ -31,7 +30,7 @@ public class PlayerController : SocialPlatformManager
     }
 
     // Update is called once per frame
-    public override void Update()
+    public override void Update ()
     {
         base.Update();
         checkInput();
@@ -40,48 +39,48 @@ public class PlayerController : SocialPlatformManager
     // Check for input from the touch controllers
     void checkInput()
     {
-        if (UnityEngine.Application.platform == RuntimePlatform.Android)
+        if (UnityEngine.Application.platform == RuntimePlatform.Android) 
         {
             // GearVR Controller
 
             // Bring up friend invite list
-            if (OVRInput.GetDown(OVRInput.Button.Back))
+            if (OVRInput.GetDown(OVRInput.Button.Back)) 
             {
                 Rooms.LaunchInvitableUserFlow(roomManager.roomID);
             }
-
+            
             // Toggle Camera
-            if (OVRInput.GetDown(OVRInput.Button.PrimaryTouchpad))
+            if (OVRInput.GetDown(OVRInput.Button.PrimaryTouchpad)) 
             {
-                ToggleCamera();
+                ToggleCamera ();
             }
 
             // Toggle Help UI
-            if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger))
+            if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger)) 
             {
-                ToggleUI();
+                ToggleUI ();
             }
         }
-        else
+        else 
         {
             // PC Touch 
 
             // Bring up friend invite list
-            if (OVRInput.GetDown(OVRInput.Button.Three))
+            if (OVRInput.GetDown(OVRInput.Button.Three)) 
             {
                 Rooms.LaunchInvitableUserFlow (roomManager.roomID);
             }
-
+            
             // Toggle Camera
-            if (OVRInput.GetDown(OVRInput.Button.Four))
+            if (OVRInput.GetDown(OVRInput.Button.Four)) 
             {
-                ToggleCamera();
+                ToggleCamera ();
             }
 
             // Toggle Help UI
-            if (OVRInput.GetDown(OVRInput.Button.PrimaryThumbstick))
+            if (OVRInput.GetDown(OVRInput.Button.PrimaryThumbstick)) 
             {
-                ToggleUI();
+                ToggleUI ();
             }
         }
     }

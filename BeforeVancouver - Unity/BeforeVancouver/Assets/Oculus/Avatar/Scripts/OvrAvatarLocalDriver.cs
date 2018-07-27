@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System;
 using System.Collections.Generic;
@@ -11,7 +11,7 @@ public class OvrAvatarLocalDriver : OvrAvatarDriver {
     ControllerPose GetMalibuControllerPose(OVRInput.Controller controller)
     {
         ovrAvatarButton buttons = 0;
-        if (OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger, controller)) buttons |= ovrAvatarButton.One;
+        if (OVRInput.Get(OVRInput.Button.One, controller)) buttons |= ovrAvatarButton.One;
 
         return new ControllerPose
         {
