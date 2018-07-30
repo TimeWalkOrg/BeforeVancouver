@@ -81,22 +81,22 @@ public class ControlManager : MonoBehaviour
 		if (Input.GetKeyUp(KeyCode.N))
 			ToggleDayNight();
 
-		if (UnityEngine.XR.XRSettings.enabled)
-		{
-			OVRInput.Button oculusTouchButtonA = OVRInput.Button.One;
-			OVRInput.Button oculusTouchButtonB = OVRInput.Button.Two;
-			OVRInput.Controller activeController = OVRInput.GetActiveController();
+		//if (UnityEngine.XR.XRSettings.enabled)
+		//{
+		//	OVRInput.Button oculusTouchButtonA = OVRInput.Button.One;
+		//	OVRInput.Button oculusTouchButtonB = OVRInput.Button.Two;
+		//	OVRInput.Controller activeController = OVRInput.GetActiveController();
 
-			if (OVRInput.GetUp(oculusTouchButtonA))
-			{
-				SetYear();
-			}
+		//	if (OVRInput.GetUp(oculusTouchButtonA))
+		//	{
+		//		SetYear();
+		//	}
 
-			if (OVRInput.GetUp(oculusTouchButtonB))
-			{
-				ToggleDayNight();
-			}
-		}
+		//	if (OVRInput.GetUp(oculusTouchButtonB))
+		//	{
+		//		ToggleDayNight();
+		//	}
+		//}
 	}
 
 	private void SetYear(bool isIncrement = true)
