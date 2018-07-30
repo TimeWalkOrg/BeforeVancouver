@@ -390,6 +390,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1023868234585826
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4154049163886450}
+  - component: {fileID: 33844258690603214}
+  - component: {fileID: 23689667615660784}
+  - component: {fileID: 82450523824719622}
+  m_Layer: 0
+  m_Name: City sounds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1025093890909680
 GameObject:
   m_ObjectHideFlags: 1
@@ -498,7 +516,7 @@ GameObject:
   - component: {fileID: 33619691895625048}
   - component: {fileID: 64259754367129792}
   - component: {fileID: 23005350047483260}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Sun'ahk Map - transparent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4516,7 +4534,7 @@ GameObject:
   - component: {fileID: 33074327364651080}
   - component: {fileID: 23838482711199984}
   - component: {fileID: 114352309251156552}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: WaterProDaytime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5619,7 +5637,7 @@ GameObject:
   - component: {fileID: 33974016080139896}
   - component: {fileID: 64974406493964478}
   - component: {fileID: 23804076744372590}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Vancouver Map - Standard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7686,7 +7704,7 @@ GameObject:
   - component: {fileID: 33439770827871664}
   - component: {fileID: 64424007856347772}
   - component: {fileID: 23952749645780780}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Vancouver Map - Standard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8660,7 +8678,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4468224854127622}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Terrain and Water 1800
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10433,7 +10451,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4471483143873496}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Terrain and Water 2018
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11273,7 +11291,7 @@ GameObject:
   - component: {fileID: 4736923119371192}
   - component: {fileID: 218653941479787920}
   - component: {fileID: 154068232933949776}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Terrain (8km terrain.party)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13578,7 +13596,7 @@ GameObject:
   - component: {fileID: 33924374282193000}
   - component: {fileID: 23511565329227440}
   - component: {fileID: 114818861355613308}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: WaterProDaytime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15098,7 +15116,7 @@ GameObject:
   - component: {fileID: 33430421138969950}
   - component: {fileID: 64629180158347788}
   - component: {fileID: 23897402991239656}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Sun'ahk Map - transparent (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16396,7 +16414,7 @@ GameObject:
   - component: {fileID: 4837745174115396}
   - component: {fileID: 218714274738196560}
   - component: {fileID: 154330228934988474}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22805,7 +22823,7 @@ Transform:
   m_LocalScale: {x: 1, y: 0.9881423, z: 1}
   m_Children: []
   m_Father: {fileID: 4966859212332634}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4135107500248232
 Transform:
@@ -23132,6 +23150,19 @@ Transform:
   - {fileID: 4355926362564888}
   m_Father: {fileID: 4577188995677734}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4154049163886450
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1023868234585826}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 15.7, y: -46, z: 88.7}
+  m_LocalScale: {x: 1, y: 0.9881423, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4966859212332634}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4154369854297728
 Transform:
@@ -23731,7 +23762,7 @@ Transform:
   m_Children:
   - {fileID: 4379124579981534}
   m_Father: {fileID: 4966859212332634}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4184152485419648
 Transform:
@@ -36714,6 +36745,7 @@ Transform:
   - {fileID: 4471483143873496}
   - {fileID: 4664423599536900}
   - {fileID: 224743223031443536}
+  - {fileID: 4154049163886450}
   - {fileID: 4134200067013870}
   - {fileID: 4183983400961018}
   m_Father: {fileID: 4475114655722916}
@@ -54333,6 +54365,41 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!23 &23689667615660784
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1023868234585826}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!23 &23694185077594232
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -65267,6 +65334,13 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1609194477844560}
   m_Mesh: {fileID: 4300652, guid: 54adf39ebeb6e4342a60b7d84d36eee5, type: 3}
+--- !u!33 &33844258690603214
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1023868234585826}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &33844567948176102
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -66697,6 +66771,101 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1703210438890608}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: a37671ac8b1f9fc41beccee1143fad24, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.746
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 498.66
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.504
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &82450523824719622
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1023868234585826}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
