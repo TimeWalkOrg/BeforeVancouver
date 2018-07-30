@@ -13713,6 +13713,10 @@ Prefab:
       propertyPath: m_Intensity
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1270087354260628, guid: 43524e44a8b07a349a7d923be0e915a1, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43524e44a8b07a349a7d923be0e915a1, type: 2}
   m_IsPrefabAsset: 0
