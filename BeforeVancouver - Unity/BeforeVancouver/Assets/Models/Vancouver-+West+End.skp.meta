@@ -3,19 +3,19 @@ guid: 1c988bd361df51f4bbd8a4d24bec3ddf
 SketchUpImporter:
   generateBackFace: 0
   mergeCoplanarFaces: 0
-  selectedNodes: 0000000001000000040000000500000008000000090000000a0000000b000000
+  selectedNodes: 00000000010000000a0000000b000000
   assetHash:
     serializedVersion: 2
-    Hash: e6dc1cf715f8e6aa34b62327a520ef38
+    Hash: cc43f047ec961ec4f089f29fe42767b4
   longitude: -123.139122
   latitude: 49.291294
   northCorrection: 359.8945273364481
   fileUnit: 0
   sketchUpImportData:
     defaultCamera:
-      position: {x: -289.5244, y: 1084.1892, z: -539.5265}
-      lookAt: {x: 36.369514, y: -282.1775, z: -122.18716}
-      up: {x: 0.5738795, y: 0.3613455, z: 0.73490936}
+      position: {x: -1147.3674, y: 1059.6011, z: 75.432304}
+      lookAt: {x: -73.36407, y: 102.55485, z: -203.70229}
+      up: {x: 0.6321047, y: 0.7572676, z: -0.16428466}
       fov: 35
       aspectRatio: 0
       orthoSize: 1
@@ -42,6 +42,8 @@ SketchUpImporter:
     2100016: Sophie_Hair
     2100018: Sophie_Shoes
     2100020: Sophie_Shirt_Blue
+    2100022: '[Translucent Glass Sky Reflection]'
+    2100024: '[Translucent Glass Blue]'
     2300000: Google Earth Snapshot
     2300002: Google Earth Snapshot 1
     2300004: Sophie
