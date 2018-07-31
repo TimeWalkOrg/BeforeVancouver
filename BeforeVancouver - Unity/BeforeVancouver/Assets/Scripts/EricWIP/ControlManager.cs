@@ -81,6 +81,10 @@ public class ControlManager : MonoBehaviour
 		if (Input.GetKeyUp(KeyCode.N))
 			ToggleDayNight();
 
+
+        if (Input.GetKeyUp(KeyCode.Q))
+            Application.Quit();
+
 		//if (UnityEngine.XR.XRSettings.enabled)
 		//{
 		//	OVRInput.Button oculusTouchButtonA = OVRInput.Button.One;
