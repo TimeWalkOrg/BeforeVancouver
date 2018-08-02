@@ -4,87 +4,87 @@ using UnityEngine;
 
 public class ControlManager : MonoBehaviour
 {
-	#region Singleton
-	private static ControlManager _instance = null;
-	public static ControlManager instance
-	{
-		get
-		{
-			if (_instance == null)
-				_instance = GameObject.FindObjectOfType<ControlManager>();
-			return _instance;
-		}
-	}
+    #region Singleton
+    private static ControlManager _instance = null;
+    public static ControlManager instance
+    {
+        get
+        {
+            if (_instance == null)
+                _instance = GameObject.FindObjectOfType<ControlManager>();
+            return _instance;
+        }
+    }
 
-	void Awake()
-	{
-		if (_instance != null && _instance != this)
-		{
-			Destroy(this.gameObject);
-			return;
-		}
-		else
-		{
-			_instance = this;
-		}
-		DontDestroyOnLoad(transform.gameObject);
-	}
+    void Awake()
+    {
+        if (_instance != null && _instance != this)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+        else
+        {
+            _instance = this;
+        }
+        DontDestroyOnLoad(transform.gameObject);
+    }
 
-	void OnApplicationQuit()
-	{
-		_instance = null;
-		DestroyImmediate(gameObject);
-	}
-	#endregion
+    void OnApplicationQuit()
+    {
+        _instance = null;
+        DestroyImmediate(gameObject);
+    }
+    #endregion
 
-	// controller
-	public GameObject fpsController;
-	public GameObject vrController;
-	public Transform playerStartT;
-	private GameObject player;
-	private GameObject avatar;
+    // controller
+    public GameObject fpsController;
+    public GameObject vrController;
+    public Transform playerStartT;
+    private GameObject player;
+    private GameObject avatar;
 
-	// time active
-	public YearData[] yearData;
-	public int currentYearIndex;// { get; private set; }
+    // time active
+    public YearData[] yearData;
+    public int currentYearIndex;// { get; private set; }
 
-	// night day
-	public Material daySkyboxMat;
-	public Material nightSkyboxMat;
-	public Color dayLightColor;
-	public Color nightLightColor;
-	public Color daySkyColor;
-	public Color nightSkyColor;
-	public float dayLightIntensity = 0.4f;
-	public float nightLightIntensity = 0.1f;
-	public Light lightComponent;
-	public bool isDay = true;
+    // night day
+    public Material daySkyboxMat;
+    public Material nightSkyboxMat;
+    public Color dayLightColor;
+    public Color nightLightColor;
+    public Color daySkyColor;
+    public Color nightSkyColor;
+    public float dayLightIntensity = 0.4f;
+    public float nightLightIntensity = 0.1f;
+    public Light lightComponent;
+    public bool isDay = true;
 
-	private void Start()
-	{
-		if (UnityEngine.XR.XRSettings.enabled)
-		{
-			player = Instantiate(vrController, playerStartT.position, playerStartT.rotation);
-		}
-		else
-		{
-			player = Instantiate(fpsController, playerStartT.position, playerStartT.rotation);
-		}
-		SetYear(1800);
-	}
+    private void Start()
+    {
+        if (UnityEngine.XR.XRSettings.enabled)
+        {
+            player = Instantiate(vrController, playerStartT.position, playerStartT.rotation);
+        }
+        else
+        {
+            player = Instantiate(fpsController, playerStartT.position, playerStartT.rotation);
+        }
+        SetYear(1800);
+    }
 
-	private void Update()
-	{
-		if (Input.GetKeyUp(KeyCode.Y))
-			SetYear();
+    private void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.Y))
+            SetYear();
 
-		if (Input.GetKeyUp(KeyCode.N))
-			ToggleDayNight();
+        if (Input.GetKeyUp(KeyCode.N))
+            ToggleDayNight();
 
 
         if (Input.GetKeyUp(KeyCode.Q))
             Application.Quit();
-
+        #if UNITY_STANDALONE_WIN
         if (UnityEngine.XR.XRSettings.enabled)
 		{
 			OVRInput.Button oculusTouchButtonA = OVRInput.Button.One;
@@ -101,6 +101,7 @@ public class ControlManager : MonoBehaviour
 				ToggleDayNight();
 			}
 		}
+        #endif
 	}
 
 	private void SetYear(bool isIncrement = true)
