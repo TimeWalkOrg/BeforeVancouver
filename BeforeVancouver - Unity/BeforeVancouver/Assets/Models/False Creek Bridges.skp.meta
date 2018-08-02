@@ -6,15 +6,15 @@ SketchUpImporter:
   selectedNodes: 0000000001000000
   assetHash:
     serializedVersion: 2
-    Hash: 9b6d1268b02db0915eab6f436d7e7db2
+    Hash: 5aa9d669ea2eefc139ca3f4e356d2d7e
   longitude: -123.12861424709405
   latitude: 49.271787455487406
   northCorrection: 359.9025221581263
   fileUnit: 0
   sketchUpImportData:
     defaultCamera:
-      position: {x: -2398.259, y: 1085.0225, z: 1046.1355}
-      lookAt: {x: -888.66583, y: 231.85678, z: 603.981}
+      position: {x: -6851.6387, y: 3035.5046, z: 2051.7473}
+      lookAt: {x: -5342.046, y: 2182.339, z: 1609.5928}
       up: {x: 0.45754334, y: 0.8790306, z: -0.13401282}
       fov: 35
       aspectRatio: 0
@@ -31,6 +31,9 @@ SketchUpImporter:
     2100006: '[0129_WhiteSmoke]'
     2100008: '[Metal Corrugated Shiny]'
     2100010: '[Metal Steel Textured White]'
+    2100012: '[Blacktop Old 01]'
+    2100014: '[Asphalt New]'
+    2100016: '[Fencing Railing Metal]'
     2300000: //RootNode
     3300000: //RootNode
     4300000: Mesh False Creek Bridges
