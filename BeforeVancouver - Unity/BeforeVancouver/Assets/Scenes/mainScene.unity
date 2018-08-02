@@ -1269,6 +1269,21 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 108293530893129708, guid: 43524e44a8b07a349a7d923be0e915a1,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0.9622642
+      objectReference: {fileID: 0}
+    - target: {fileID: 108293530893129708, guid: 43524e44a8b07a349a7d923be0e915a1,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0.9622642
+      objectReference: {fileID: 0}
+    - target: {fileID: 108293530893129708, guid: 43524e44a8b07a349a7d923be0e915a1,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0.9622642
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43524e44a8b07a349a7d923be0e915a1, type: 2}
   m_IsPrefabAsset: 0
@@ -1733,7 +1748,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 4.979, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -23.1, y: 0.1}
+  m_AnchoredPosition: {x: -23.1, y: -16.6}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1591410117
