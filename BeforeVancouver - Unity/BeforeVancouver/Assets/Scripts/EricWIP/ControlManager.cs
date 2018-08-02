@@ -87,9 +87,13 @@ public class ControlManager : MonoBehaviour
         #if UNITY_STANDALONE_WIN
         if (UnityEngine.XR.XRSettings.enabled)
 		{
-			OVRInput.Button oculusTouchButtonA = OVRInput.Button.One;
-			OVRInput.Button oculusTouchButtonB = OVRInput.Button.Two;
-			OVRInput.Controller activeController = OVRInput.GetActiveController();
+			OVRInput.Button oculusTouchButtonA = OVRInput.Button.PrimaryIndexTrigger;
+            // OVRInput.Button oculusTouchButtonB = OVRInput.Button.One; Commented out for Oculus Rift - check if GO running
+
+            OVRInput.Button oculusTouchButtonB = OVRInput.Button.Two;
+            
+
+            OVRInput.Controller activeController = OVRInput.GetActiveController();
 
 			if (OVRInput.GetUp(oculusTouchButtonA))
 			{

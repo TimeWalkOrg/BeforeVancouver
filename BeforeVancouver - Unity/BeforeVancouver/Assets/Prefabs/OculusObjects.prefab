@@ -4557,8 +4557,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b3bb179010e22743be0b39a97a69566, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AimButton: 4
-  TeleportButton: 4
+  AimButton: -2147483648
+  TeleportButton: -2147483648
   FastTeleport: 0
   Avatar: {fileID: 114261090182891894}
   InputMode: 2
@@ -8344,8 +8344,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 2.5043374e-12}
+  m_AnchoredPosition: {x: 0, y: 24015.426}
+  m_SizeDelta: {x: 0, y: 2.696278e+23}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!224 &224858714294567356
 RectTransform:
