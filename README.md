@@ -1,6 +1,11 @@
 # BeforeVancouver
 Files related to the "Before Vancouver" project
 
+Class Links:
+* [Class Overview](https://docs.google.com/presentation/d/1Zwl7zCri6xsqczkPznjSKGYinjghAJB7MMd1kJhNThg/edit?usp=sharing)
+* [Class Lists](https://docs.google.com/spreadsheets/d/12r-mLX0GRnHWKrvgyK82KvFKT3QKRrJXg6Zz6SLzxKE/edit#gid=130635240)
+* [Class #1 - Curriculum](https://docs.google.com/document/d/15mRaz1rRTDv9DvKjN7kZxqbE_VucmmTmRQneLJxBOSU/edit)
+
 To download these files, you can either:
 1. use a Github client (e.g. Sourcetree), which will allow you to make local changes and push them back to the project
 2. click the green "Clone or download" button above, then choose "Download ZIP".  When the .zip file is downloaded, extract it onto your local hard drive
