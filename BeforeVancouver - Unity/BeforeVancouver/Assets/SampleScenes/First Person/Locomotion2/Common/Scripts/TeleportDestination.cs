@@ -103,14 +103,15 @@ public class TeleportDestination : MonoBehaviour
 
 	public void OnDeactivated()
 	{
-		if (Deactivated != null)
-		{
-			Deactivated(this);
-		}
-		else
-		{
-			Recycle();
-		}
+		Destroy(this.gameObject);
+		//if (Deactivated != null)
+		//{
+		//	Deactivated(this);
+		//}
+		//else
+		//{
+		//	Recycle();
+		//}
 	}
 
 	public void Recycle()

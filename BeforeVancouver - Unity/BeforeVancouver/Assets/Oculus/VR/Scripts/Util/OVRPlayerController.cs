@@ -154,6 +154,8 @@ public class OVRPlayerController : MonoBehaviour
 
 	void Start()
 	{
+		// hack for odd joystick movement
+		this.transform.SetParent(null);
 		// Add eye-depth as a camera offset from the player controller
 		var p = CameraRig.transform.localPosition;
 		p.z = OVRManager.profile.eyeDepth;

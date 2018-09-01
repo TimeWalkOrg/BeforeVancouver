@@ -772,7 +772,7 @@ public class LocomotionTeleport : MonoBehaviour
 		LogState("PostTeleportState: End");
 
 		DeactivateDestination();
-
+		Debug.Log("Finish teleport");
 		// Wait until the next frame to proceed to the next state's coroutine.
 		yield return null;
 
